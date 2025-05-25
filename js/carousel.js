@@ -8,7 +8,7 @@
 class FeatureCarousel {
     constructor() {
         this.currentSlide = 0;
-        this.totalSlides = 17;
+        this.totalSlides = 18;
         this.slides = document.querySelectorAll('.carousel-slide');
         this.currentSlideEl = document.getElementById('currentSlide');
         this.totalSlidesEl = document.getElementById('totalSlides');
