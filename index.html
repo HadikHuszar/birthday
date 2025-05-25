@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    
+    <!-- External Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Intro Video Overlay -->
+    <div class="intro-video-overlay" id="introVideoOverlay">
+        <video id="vid01" autoplay playsinline muted>
+            <source src="assets/moving/vid01.mov" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="bouncing-message">Click anywhere to continue</div>
+    </div>
+
+    <!-- Prelude Video -->
+    <div class="prelude-video" id="preludeVideo">
+        <video id="vid02" playsinline>
+            <source src="assets/moving/vid02.mov" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="carousel-container hidden">
+        <!-- Static background elements -->
+        <div class="static-bg"></div>
+        <div class="particles-bg"></div>
+        <div class="spotlight-gradient"></div>
+        <div class="horizontal-gradient"></div>
+        <div class="vignette-overlay"></div>
+        <div class="floating-particles" id="particles"></div>
+        
+        <div class="carousel-wrapper" id="carouselWrapper">
+            <!-- Slides 0-16 (your existing slides) -->
+            <div class="carousel-slide active" id="slide0">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/A.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">Andrea</h2>
+                    <p class="feature-description">39° 26′ 44.5″ N&nbsp;&nbsp;&nbsp;123° 48′ 19.1″ W<br>Fort Bragg, CA<br>7,420 miles away</p>
+                </div>
+            </div>
+            
+            <!-- Remaining slides... (keeping all your existing slides) -->
+            <div class="carousel-slide" id="slide1">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/Shasha.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">ShaSha</h2>
+                    <p class="feature-description">37° 54′ 22″ N&nbsp;&nbsp;&nbsp;122° 32′ 42″ W<br>San Jose, CA<br>7,373 miles away</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" id="slide2">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/F+A.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">Francesca + Astrid</h2>
+                    <p class="feature-description">33° 41′ 4.6″ N&nbsp;&nbsp;&nbsp;117° 49′ 35.4″ W<br>Irvine, CA<br>7,525 miles away</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" id="slide3">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/Saiid.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">Saiid</h2>
+                    <p class="feature-description">37° 14′ 10″ N&nbsp;&nbsp;&nbsp;121° 57′ 42″ W<br>Los Gatos, CA<br>7,380 miles away</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" id="slide4">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/Nadimeh.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">Nadimeh</h2>
+                    <p class="feature-description">48° 51′ 23.8″ N&nbsp;&nbsp;&nbsp;2° 21′ 7.9″ E<br>Paris, France<br>2,570 miles away</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" id="slide5">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/D+D.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">Debbie + Dennis</h2>
+                    <p class="feature-description">37° 46′ 26.3″ N&nbsp;&nbsp;&nbsp;122° 25′ 52.7″ W<br>San Francisco, CA<br>7,346 miles away</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" id="slide6">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/Billy.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">Billy</h2>
+                    <p class="feature-description">35° 45′ 34.45″ N&nbsp;&nbsp;&nbsp;79° 01′ 09.48″ W<br>North Carolina<br>6,561 miles away</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" id="slide7">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/A+M.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">Alice + Max</h2>
+                    <p class="feature-description">33° 46′ 18.8″ N&nbsp;&nbsp;&nbsp;118° 24′ 5.8″ W<br>Palo Verdes, CA<br>7,493 miles away</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" id="slide8">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/Moji.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">Moji</h2>
+                    <p class="feature-description">34° 08′ 18″ N&nbsp;&nbsp;&nbsp;118° 39′ 39″ W<br>Calabasas, CA<br>7,570 miles away</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" id="slide9">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/Betty.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">Betty</h2>
+                    <p class="feature-description">37° 54′ 22″ N&nbsp;&nbsp;&nbsp;122° 32′ 42″ W<br>Mill Valley, CA<br>7,570 miles away</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" id="slide10">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/Dorina.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">Dorina</h2>
+                    <p class="feature-description">38° 1′ 9.8″ N&nbsp;&nbsp;&nbsp;122° 8′ 2.8″ W<br>Martinez, CA<br>7,390 miles away</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" id="slide11">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/Ladia.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">Ladia</h2>
+                    <p class="feature-description">37° 52′ 24.6″ N&nbsp;&nbsp;&nbsp;122° 27′ 23.4″ W<br>Tiburon, CA<br>7,370 miles away</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" id="slide12">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/H+P.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">Haleh + Peyman</h2>
+                    <p class="feature-description">38° 1′ 9.8″ N&nbsp;&nbsp;&nbsp;122° 8′ 2.8″ W<br>Martinez, CA<br>7,390 miles away</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" id="slide13">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/Sarah.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">Sarah</h2>
+                    <p class="feature-description">34° 0′ 2.5″ N&nbsp;&nbsp;&nbsp;81° 2′ 5.3″ W<br>South Carolina<br>6,561 miles away</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" id="slide14">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/Group.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">Hesham, Delal + Behnam</h2>
+                    <p class="feature-description">33° 44′ 40.2″ N&nbsp;&nbsp;&nbsp;118° 23′ 13.2″ W<br>Rancho Verdes, CA<br>7,494 miles away</p>
+                </div>
+            </div>
+
+            <div class="carousel-slide" id="slide15">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/Z.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">Ziza</h2>
+                    <p class="feature-description">33° 57′ 42.1″ N&nbsp;&nbsp;&nbsp;118° 27′ 5.0″ W<br>Los Angeles, CA<br>7,500 miles away</p>
+                </div>
+            </div>
+            
+            <!-- FINAL SLIDE -->
+            <div class="carousel-slide" id="slide16">
+                <video class="feature-video" playsinline data-duration="auto">
+                    <source src="assets/moving/S.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-content">
+                    <h2 class="feature-title">Shirley</h2>
+                    <p class="feature-description">33° 57′ 42.1″ N&nbsp;&nbsp;&nbsp;118° 27′ 5.0″ W<br>Los Angeles, CA<br>7,500 miles away</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Overlay Frame -->
+        <div class="navigation-overlay">
+            <div class="nav-top">
+                <img src="assets/static/HappyBdayM.png" alt="Logo" id="logo" class="logo">
+                <div class="slide-counter">
+                    <div class="counter-display">
+                        <span class="current-slide" id="currentSlide">01</span>
+                        <div class="counter-separator"></div>
+                        <span class="total-slides" id="totalSlides">17</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bottom">
+                <div class="sound-controls">
+                    <button class="sound-btn" id="soundBtn">
+                        <i class="material-icons">volume_up</i>
+                    </button>
+                </div>
+                <div class="video-progress" id="videoProgress">
+                    <svg class="progress-ring">
+                        <circle class="progress-ring__circle"></circle>
+                        <circle class="progress-ring__progress"></circle>
+                    </svg>
+                    <div class="progress-time">0</div>
+                </div>
+                <button class="nav-btn" id="prevBtn">
+                    <i class="material-icons">keyboard_arrow_left</i>
+                </button>
+                <button class="nav-btn" id="pauseBtn">
+                    <i class="material-icons">pause</i>
+                </button>
+                <button class="nav-btn" id="nextBtn">
+                    <i class="material-icons">keyboard_arrow_right</i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Birthday Finale (fade to black screen) -->
+    <div class="birthday-finale" id="birthdayFinale">
+        <div class="birthday-message">Happy Birthday, Moez!</div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="js/carousel.js"></script>
+    
+    <!-- Clean prelude transition logic -->
+    <script>
+        window.userHasInteracted = false;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const introOverlay = document.getElementById('introVideoOverlay');
+            const preludeVideo = document.getElementById('preludeVideo');
+            const vid01 = document.getElementById('vid01');
+            const vid02 = document.getElementById('vid02');
+            
+            // Phase 1: Click intro overlay → show prelude
+            introOverlay.addEventListener('click', function() {
+                window.userHasInteracted = true;
+                
+                // Hide intro, show prelude
+                vid01.pause();
+                introOverlay.classList.add('hidden');
+                preludeVideo.classList.add('active');
+                
+                // Play prelude with sound
+                vid02.muted = false;
+                vid02.play().catch(e => console.log('Prelude play failed:', e));
+                
+                // Enable sound for carousel
+                enableCarouselSound();
+            });
+            
+            // Phase 2: Prelude ends → start carousel
+            vid02.addEventListener('ended', function() {
+                startCarousel();
+            });
+            
+            // Skip prelude on click
+            preludeVideo.addEventListener('click', function() {
+                startCarousel();
+            });
+            
+            function startCarousel() {
+                // Hide prelude
+                vid02.pause();
+                preludeVideo.style.display = 'none';
+
+                // Show carousel
+                document.querySelector('.carousel-container').classList.remove('hidden');
+
+                // Initialize carousel now, if not already done
+                if (!window.featureCarouselInstance) {
+                    window.featureCarouselInstance = new FeatureCarousel();
+                    // Wait a tiny bit to ensure carousel is set up
+                    setTimeout(() => {
+                        const firstVideo = document.querySelector('.carousel-slide.active video');
+                        if (firstVideo) {
+                            firstVideo.currentTime = 0;
+                            firstVideo.play().catch(e => {});
+                        }
+                    }, 100);
+                } else {
+                    window.featureCarouselInstance.goToSlide(0);
+                    // Play the first video
+                    const firstVideo = document.querySelector('.carousel-slide.active video');
+                    if (firstVideo) {
+                        firstVideo.currentTime = 0;
+                        firstVideo.play().catch(e => {});
+                    }
+                }
+            }
+            
+            function enableCarouselSound() {
+                // Enable sound for all carousel media
+                const videos = document.querySelectorAll('.carousel-slide video');
+                const audios = document.querySelectorAll('.carousel-slide audio');
+                
+                videos.forEach(video => video.muted = false);
+                audios.forEach(audio => audio.muted = false);
+                
+                // Update sound button
+                const soundBtn = document.getElementById('soundBtn');
+                if (soundBtn) {
+                    soundBtn.classList.remove('muted');
+                    soundBtn.querySelector('i').textContent = 'volume_up';
+                }
+                
+                // Update carousel state
+                if (window.featureCarouselInstance) {
+                    window.featureCarouselInstance.isMuted = false;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
